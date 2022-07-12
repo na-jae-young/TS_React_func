@@ -8,23 +8,16 @@ import Header from './conponent/Header';
 import Control from './conponent/Control';
 import Create from './conponent/Create';
 import Update from './conponent/Update';
+import Delete from './conponent/Delete';
 import { JsxChild, JsxElement, JsxExpression } from 'typescript';
 import { eventNames } from 'process';
 //import { PromptProps } from 'react-router-dom';
 
-interface DeleteProps{
-  confirm():void
-}
-export function Delete(props:DeleteProps){
-  return (<p 
-    onClick={(e)=>{
-      e.preventDefault()
-      props.confirm()
-    }}></p>)
-}
-
 
 function App() {
+
+
+
   const [Mode,setMode] = useState('welcome')
   const [HeadTitle,setHeadTitle] = useState('react')
   const [topics,setTopic] = useState([
